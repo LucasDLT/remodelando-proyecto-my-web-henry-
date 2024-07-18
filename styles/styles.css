@@ -1,0 +1,196 @@
+body {
+  background-image: url(../img/fondo-pagina.jpg);
+  font-family: "Roboto Condensed", sans-serif;
+}
+header{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  margin-top: 6rem;
+  padding: 0.5rem;
+}
+.nombre,
+.titulo{
+  font-size: 4rem;
+  
+}
+.foto {
+  width: 30%;
+  border-radius: 2%;
+  mask-image: linear-gradient(
+    black 93%, transparent
+  );
+}
+
+/**************presentacion************************/
+
+.presentacion .parrafo{
+text-align: justify;
+margin: 4rem;
+font-size: large;
+}
+
+/**************tecnologias*************************/
+
+.conocimientos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16rem;
+}
+
+.titulo_tecnologia{
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.tecnologias{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+  padding: 0;
+  list-style: none;
+}
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:  0 1rem;
+  
+}
+.img{
+  width: 50%;
+}
+
+/***************actividades*************************/
+
+.actividades{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+}
+
+.titulo_actividades{
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  width: 90vw;
+  height: 70vh;
+  border: black 1px solid;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: large;
+  height: auto;
+  border: black solid 1px;
+}
+.contenedor_actividades{
+  display: flex;
+  border: solid black 1px;
+  height: 69vh;
+  width: 60vw;
+}
+
+
+
+
+/*
+.estilo-compartido,
+.foto,
+form,
+article {
+  margin: 1rem;
+  padding: 0.1rem;
+  text-align: center;
+  font-size: xx-large;
+}
+
+
+.form,
+article {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1rem;
+}
+
+ul {
+  display: flex;  
+  }
+  
+li{
+  align-items: center;
+  justify-content: space-between;
+}
+
+li .img{
+  width: 10rem;
+}
+
+li:hover{
+  transition: 02s;
+}
+li:hover img{
+  transform: scale(0.9);
+  transition: 02s;}
+  
+
+.tecnologias{
+width: 90vw;
+display: flex;
+flex-direction: row;
+align-items: center;
+height: auto;
+justify-content: space-around;
+
+}
+form {
+  height: 50vh;
+  border: black solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+article {
+  border: rgb(151, 151, 151) 1px solid;
+  height: 50vh;
+  width: 50vw;
+}
+
+.actividades {
+  box-shadow: violet 1px 1px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: gray solid 1px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; 
+  height: 50vh;
+}
+.div{
+  width: calc(33.33% - 2rem);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: gray solid 1px;
+}
+.imgRender{
+  width: 5em;
+}

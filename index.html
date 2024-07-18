@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <title>My Web Page</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <img class="foto" src="img/imgPagina.jpeg" alt="imagen personal" />
+      <div>
+        <h1 class="titulo">PORTFOLIO</h1>
+        <h2 class="nombre">Lucas S. de la TORRE</h2>
+      </div>
+    </header>
+    <section class="presentacion">
+      <p class="parrafo">
+        Soy estudiante de programacion y llevo inmerso en este fascinante mundo
+        un año. Me emociona ser parte de la comunidad de programadores que tanto
+        me inspiro a realizar esta incursion, donde con cada codigo, te
+        encontras un nuevo desafio que pone a prueba tus habilidades y
+        creatividad.
+      </p>
+    </section>
+    <section class="conocimientos">
+      <h2 class="titulo_tecnologia">TECNOLOGIAS</h2>
+        <ul class="tecnologias">
+          <li class="item"><img class="img" src="logos/html-logo.svg" alt="logo Html" /></li>
+          <li class="item"><img class="img" src="logos/javascript-logo.svg" alt="logo javascript" /></li>
+          <li class="item"><img class="img" src="logos/css-logo.svg" alt="logo Css" /></li>
+        </ul>
+    </section>
+
+
+
+
+
+
+    <section class="actividades">
+
+      <h2 class="titulo_actividades">ACTIVIDADES FAVORITAS</h2>
+
+      <div class="contenedor">
+        <form class="form" action="#">
+          <label for="titulo">Título: </label>
+          <div><input type="text" id="titulo" name="titulo" placeholder="Ingrese el título" /></div>
+          <label for="descripcion">Descripción: </label>
+          <div><textarea name="descripcion" id="descripcion" rows="2" placeholder="Ingresa la descripción de la actividad"></textarea></div>
+          <label for="imgUrl">URL de la imagen: </label>
+          <div><input type="text" id="imgUrl" name="imgUrl" placeholder="Ingrese la URL" /></div>
+          <div><input type="submit" value="Enviar" id="enviar" name="enviar"></div>
+        </form>
+  
+        
+        <article id="contenedor_actividades" class="contenedor_actividades"> </article>
+      </div>
+   
+    </section>
+  </main>
+
+  
+  <footer>
+    <p>Página creada por <strong>LSDT</strong>. Información y derechos reservados. &copy; 2024</p>
+  </footer>
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
