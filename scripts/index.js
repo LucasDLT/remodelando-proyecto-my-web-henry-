@@ -1,59 +1,36 @@
-function getDataForm() {
-  let data = JSON.parse(localStorage.getItem("dataForm"))
-  if (data) {
-    console.log(data);
-    primerRepo.createActivity(data)
-    mostrarActividades();
-
-  }else{alert("Comienza a agregar actividades.")}
-  return data
-}
-getDataForm()
-
-class Activity {
-  constructor({ id, title, description, imgUrl }) {
-    this.id = id,
-    this.title = title,
-    this.description = description,
-    this.imgUrl = imgUrl;
-  }
-}
 class Repository {
-  constructor(activities) {
-    this.activities = activities || [];
-    this.id = 0;
+  constructor() {
+    this.activities = [];
   }
-  getAllActivities = () => this.activities;
 
-  createActivity = (activity) => {
-    this.id++;
-    let newActivity = new Activity(activity);
-    this.activities.push(newActivity);
-  };
-  deleteActivity = (id) => {
-    let deleted = this.activities.filter((activities) => activities.id !== id);
-    return (this.activities = [...deleted]);
-  };
+  createActivity(activity) {
+    activity.id = this.activities.length + 1;
+    this.activities.push(activity);
+  }
+
+  getAllActivities() {
+    return this.activities;
+  }
 }
 
-
-const contenedor = document.getElementById("contenedor");
+const contenedor = document.getElementById("contenedor_actividad");
 
 const boton = document.querySelector("#enviar");
 
 const primerRepo = new Repository();
 
-boton.addEventListener("click",handler )
+boton.addEventListener("click", handler);
 
 function mostrarActividades() {
-  contenedor.innerHTML = " ";
+  contenedor.innerHTML = "";
   const listado = primerRepo.getAllActivities();
   const mapeo = listado.map((activity) => maquetaCard(activity));
-    mapeo.forEach((card) => {contenedor.append(card)});
+  mapeo.forEach((card) => { contenedor.append(card); });
 }
 
 function handler(event) {
-  event.preventDefault();
+  event.preventDefault();  
+
 
   const titulo = document.querySelector("#titulo").value.trim();
   const descripcion = document.querySelector("#descripcion").value.trim();
@@ -66,18 +43,13 @@ function handler(event) {
 
   const nuevaAct = {
     title: titulo,
-    description:descripcion,
-    imgUrl:imagenUrl,
-  }
-  let search=  localStorage.setItem("dataForm", JSON.stringify(nuevaAct))
+    description: descripcion,
+    imgUrl: imagenUrl,
+  };
 
-  if (search = null) {
-    localStorage.setItem("dataForm", JSON.stringify(nuevaAct))
-    mostrarActividades();
-  }
-  localStorage.setItem("dataForm", )
-  primerRepo.createActivity(search)
-  
+  primerRepo.createActivity(nuevaAct);
+  mostrarActividades();
+
   document.querySelector("#titulo").value = "";
   document.querySelector("#descripcion").value = "";
   document.querySelector("#imgUrl").value = "";
@@ -85,31 +57,31 @@ function handler(event) {
 
 function maquetaCard(activity) {
   const h3 = document.createElement("h3");
-  h3.className = "textos";
+  h3.className = "titulo_div";
   h3.innerText = activity.title;
 
   const p = document.createElement("p");
-  p.className = "textos";
+  p.className = "parrafo_div";
   p.innerText = activity.description;
 
   const imagen = document.createElement("img");
   imagen.className = "imgRender";
   imagen.src = activity.imgUrl;
-  imagen.alt = "imagen renderizada";  
-
+  imagen.alt = "imagen renderizada";
 
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "Eliminar";
+  deleteButton.className = "btn"
   deleteButton.addEventListener("click", () => {
     eliminarActividad(activity.id);
   });
 
   const div = document.createElement("div");
   div.className = "div";
-  div.append(h3, p, imagen, deleteButton);
-
+  div.append(h3, imagen, p, deleteButton);
   return div;
 }
+
 function eliminarActividad(id) {
   const index = primerRepo.activities.findIndex(activity => activity.id === id);
 
@@ -118,5 +90,3 @@ function eliminarActividad(id) {
     mostrarActividades();
   }
 }
-
-
