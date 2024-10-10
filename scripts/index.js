@@ -12,7 +12,7 @@ class Repository {
     return this.activities;
   }
 }
-
+  
 const contenedor = document.getElementById("contenedor_actividad");
 
 const boton = document.querySelector("#enviar");
