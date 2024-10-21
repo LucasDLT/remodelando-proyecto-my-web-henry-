@@ -1,6 +1,8 @@
 body {
-  background-image: url(../img/fondo-pagina.jpg);
+  /*background-image: url(../img/fondo-pagina.jpg);*/
   font-family: "Roboto Condensed", sans-serif;
+  background-color: rgba(0, 0, 0, 0.896);
+  color: white;
 }
 header{
   display: flex;
@@ -12,14 +14,35 @@ header{
 .nombre,
 .titulo{
   font-size: 4rem;
-  
+  font-weight: bolder;
+  position: relative;
 }
 .foto {
-  width: 25%;
-  border-radius: 1%;
+  width: 20%;
+  border-radius: 50%;
+  border: rgb(255, 255, 255) solid 5px;
   mask-image: linear-gradient(
-    black 93%, transparent
+  black 50%, transparent
   );
+}
+.nombre::after{
+  content:' ';
+  display: block;
+  position: absolute;
+  right:0 ;
+  bottom:0 ;
+  height: 1px;
+  width: 100%;
+  background-color: rgb(5, 69, 103);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out;
+}
+.nombre:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-in ;
+
 }
 
 /**************presentacion************************/
@@ -41,7 +64,7 @@ font-size: large;
 }
 
 .titulo_tecnologia{
-  font-size: 2rem;
+  font-size: 4rem;
   margin: 0.5rem;
 }
 
@@ -75,7 +98,7 @@ font-size: large;
 }
 
 .titulo_actividades{
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 5rem;
 }
 
@@ -86,19 +109,22 @@ font-size: large;
   margin-top: 1rem;
   width: 90vw;
   height: 70vh;
+  max-height: 30rem;
 }
 
-form{
+.form{
   display: flex;
   flex-direction: column;
-  padding-left: 6rem;
-  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
   width: 16rem;
   font-size: large;
   height: auto;
-  border: black solid 1px;
+  border: white solid 1px;
   border-radius: 5px;
+  height: 20rem;
 }
+
 .contenedor_actividades{
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +132,7 @@ form{
   overflow-x: scroll;
   height: 69vh;
   width: 60vw;
+  border: white solid 1px;
 }
 
 .div{
