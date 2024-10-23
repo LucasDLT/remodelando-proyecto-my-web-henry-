@@ -66,6 +66,13 @@ font-size: large;
 .titulo_tecnologia{
   font-size: 4rem;
   margin: 0.5rem;
+  font-weight: bolder;
+}
+.titulo_tecnologia:hover,
+.titulo_actividades:hover{
+color: rgb(15, 22, 29);
+transition: color .3s ease, filter .3s ease;
+filter: drop-shadow(0 0 0.2rem white);
 }
 
 .tecnologias{
@@ -99,6 +106,7 @@ font-size: large;
 
 .titulo_actividades{
   font-size: 4rem;
+  font-weight: bolder;
   margin-bottom: 5rem;
 }
 
@@ -121,11 +129,9 @@ font-size: large;
   font-size: large;
   font-weight: bolder;
   letter-spacing: 1px;
-  height: auto;
-  border: rgb(83, 125, 143) solid 3px;
-  box-shadow: 1em 0 4em rgba(31, 75, 96, 0.84), -1em 0 4em rgb(0, 68, 128);
+  box-shadow: 0 0 3em rgba(31, 75, 96, 0.84), -0 0 3em rgb(0, 68, 128);
   border-radius: 5px;
-  height: 20rem;
+  height: 25rem;
   gap: 1rem;
 }
 input, textarea{
@@ -187,6 +193,9 @@ font-weight: bolder;
   width: 80%;
   height: 100%;
   border-radius: 5%;
+  mask-image: linear-gradient(
+    black 50%, transparent
+    );
 }
 .btn{
   margin-top: 2px;
@@ -203,90 +212,12 @@ font-weight: bolder;
   transition: background-color 0.5s ease;
 }
 
-/*
-.estilo-compartido,
-.foto,
-form,
-article {
-  margin: 1rem;
-  padding: 0.1rem;
+/* footer*/
+
+footer{
   text-align: center;
-  font-size: xx-large;
-}
-
-
-.form,
-article {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 1rem;
-}
-
-ul {
-  display: flex;  
-  }
-  
-li{
-  align-items: center;
-  justify-content: space-between;
-}
-
-li .img{
-  width: 10rem;
-}
-
-li:hover{
-  transition: 02s;
-}
-li:hover img{
-  transform: scale(0.9);
-  transition: 02s;}
-  
-
-.tecnologias{
-width: 90vw;
-display: flex;
-flex-direction: row;
-align-items: center;
-height: auto;
-justify-content: space-around;
-
-}
-form {
-  height: 50vh;
-  border: black solid 1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-article {
-  border: rgb(151, 151, 151) 1px solid;
-  height: 50vh;
-  width: 50vw;
-}
-
-.actividades {
-  box-shadow: violet 1px 1px;
   padding: 1rem;
-  margin: 1rem;
-  border-radius: 1rem;
-  border: gray solid 1px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start; 
-  height: 50vh;
-}
-.div{
-  width: calc(33.33% - 2rem);
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 1rem;
-  border: gray solid 1px;
-}
-.imgRender{
-  width: 5em;
+  margin: 0.5rem;
+  font-weight: lighter;
+  font-size: larger;
 }
