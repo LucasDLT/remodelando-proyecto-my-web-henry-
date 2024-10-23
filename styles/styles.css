@@ -1,8 +1,10 @@
 body {
-  /*background-image: url(../img/fondo-pagina.jpg);*/
   font-family: "Roboto Condensed", sans-serif;
   background-color: rgba(7, 7, 7, 0.896);
   color: white;
+}
+html{
+  scroll-behavior: smooth;
 }
 header{
   display: flex;
@@ -10,12 +12,14 @@ header{
   align-items: center;
   margin-top: 6rem;
   padding: 0.5rem;
+  z-index: 2;
 } 
 .nombre,
 .titulo{
   font-size: 4rem;
   font-weight: bolder;
   position: relative;
+  z-index: 2;
 }
 .foto {
   width: 20%;
@@ -25,25 +29,6 @@ header{
   black 50%, transparent
   );
 }
-.nombre::after{
-  content:' ';
-  display: block;
-  position: absolute;
-  right:0 ;
-  bottom:0 ;
-  height: 1px;
-  width: 100%;
-  background-color: rgb(5, 69, 103);
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.5s ease-in-out;
-}
-.nombre:hover::after{
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  transition: transform 0.5s ease-in ;
-
-}
 
 /**************presentacion************************/
 
@@ -51,6 +36,47 @@ header{
 text-align: justify;
 margin: 4rem;
 font-size: large;
+z-index: 2;
+}
+
+/**************navbar******************************/
+
+.navbar{
+  position: fixed;
+  z-index: 1;
+  top: 1rem;
+  right: 1rem;
+}
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+}
+.navbar ul li{
+  position: relative;
+}
+a{
+  text-decoration: none;
+  font-size:large;
+  color: white;
+
+}
+.navbar ul li a::after{
+  content:' ';
+  display: block;
+  position: absolute;
+  right:0 ;
+  bottom:0 ;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(5, 69, 103);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out;
+}
+.navbar ul li a:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-in ;
 }
 
 /**************tecnologias*************************/
@@ -61,6 +87,7 @@ font-size: large;
   justify-content: center;
   align-items: center;
   margin-top: 16rem;
+  z-index: 2;
 }
 
 .titulo_tecnologia{
@@ -71,7 +98,7 @@ font-size: large;
 .titulo_tecnologia:hover,
 .titulo_actividades:hover{
 color: rgb(15, 22, 29);
-transition: color .3s ease, filter .3s ease;
+transition: color .5s ease, filter .5s ease;
 filter: drop-shadow(0 0 0.2rem white);
 }
 
@@ -82,16 +109,18 @@ filter: drop-shadow(0 0 0.2rem white);
   margin: 4rem;
   padding: 0;
   list-style: none;
+  z-index: 2;
 }
 .item{
   display: flex;
   justify-content: center;
   align-items: center;
   margin:  0 1rem;
-  
+  z-index: 2;
 }
 .img{
   width: 50%;
+  z-index: 2;
 }
 
 /***************actividades*************************/
@@ -102,6 +131,7 @@ filter: drop-shadow(0 0 0.2rem white);
   align-items: center;
   margin-top: 16rem;
   margin-bottom: 16rem;
+  z-index: 2;
 }
 
 .titulo_actividades{
@@ -118,6 +148,7 @@ filter: drop-shadow(0 0 0.2rem white);
   width: 90vw;
   height: 70vh;
   max-height: 30rem;
+  z-index: 2;
 }
 
 .form{
@@ -138,8 +169,9 @@ input, textarea{
   border-radius: 5px;
   border: 1px solid rgb(0, 0, 0);
   background-color: rgba(31, 75, 96, 0.84);
-  font-weight: bold;
+  font-weight: lighter;
   letter-spacing: 1px;
+  text-align: center;
 }
 input{
   height: 1.5rem;
@@ -159,7 +191,7 @@ textarea{
   overflow-x: scroll;
   height: 69vh;
   width: 60vw;
-
+  z-index: 2;
 }
 
 .div{
@@ -174,6 +206,7 @@ textarea{
   border-radius: 0.3rem;
   background-color:rgba(128, 128, 128, 0.247);
   color: black; 
+  z-index: 2;
 }
 
 .titulo_div{
@@ -181,13 +214,13 @@ font-size: 1.4rem;
 margin-bottom: 2px;
 text-transform: uppercase;
 font-weight: bolder;
-
-
+z-index: 2;
 }
 .parrafo_div{
 font-size: 1rem;
 margin: 5px;
 font-weight: bolder;
+z-index: 2;
 }
 .imgRender{
   width: 80%;

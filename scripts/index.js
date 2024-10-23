@@ -1,3 +1,4 @@
+
 class Repository {
   constructor() {
     this.activities = this.loadActivities();//con this hago referencia a un metodo definido mas abajo

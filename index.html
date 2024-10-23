@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css" />
   <title>My Web Page</title>
 </head>
@@ -20,19 +21,28 @@
         <h1 class="titulo">PORTFOLIO</h1>
         <h2 class="nombre">Lucas S. de la TORRE</h2>
       </div>
+      <nav class="navbar" data-aos="fade-down">
+        <ul>
+          <li><a href="#top">INICIO</a></li>
+          <li><a href="#tecnologias">TECNOLOGIAS</a></li>
+          <li><a href="#actividades">ACTIVIDADES</a></li>
+        </ul>
+      </nav>
     </header>
     <section class="presentacion">
       <p class="parrafo">
-        Soy estudiante de programación y he estado inmerso en este fascinante campo durante un año. Me entusiasma formar parte de la comunidad de programadores que tanto me ha inspirado a emprender esta trayectoria, que pone a prueba mis habilidades y creatividad, lo cual considero una valiosa oportunidad de crecimiento.
+        Soy estudiante de programación y he estado inmerso en este fascinante campo durante un año. Me entusiasma formar
+        parte de la comunidad de programadores que tanto me ha inspirado a emprender esta trayectoria, que pone a prueba
+        mis habilidades y creatividad, lo cual considero una valiosa oportunidad de crecimiento.
       </p>
     </section>
     <section class="conocimientos">
-      <h2 class="titulo_tecnologia">TECNOLOGIAS</h2>
-        <ul class="tecnologias">
-          <li class="item"><img class="img" src="logos/html-logo.svg" alt="logo Html" /></li>
-          <li class="item"><img class="img" src="logos/javascript-logo.svg" alt="logo javascript" /></li>
-          <li class="item"><img class="img" src="logos/css-logo.svg" alt="logo Css" /></li>
-        </ul>
+      <h2 class="titulo_tecnologia " id="tecnologias" data-aos="fade-left">TECNOLOGIAS</h2>
+      <ul class="tecnologias">
+        <li class="item"><img class="img" src="logos/html-logo.svg" alt="logo Html" /></li>
+        <li class="item"><img class="img" src="logos/javascript-logo.svg" alt="logo javascript" /></li>
+        <li class="item"><img class="img" src="logos/css-logo.svg" alt="logo Css" /></li>
+      </ul>
     </section>
 
 
@@ -40,33 +50,38 @@
 
 
 
-    <section class="actividades">
+    <section class="actividades" id="actividades">
 
-      <h2 class="titulo_actividades">ACTIVIDADES FAVORITAS</h2>
+      <h2 class="titulo_actividades" data-aos="fade-right">ACTIVIDADES FAVORITAS</h2>
 
       <div class="contenedor">
-        <form class="form" action="#">
+        <form class="form" action="#" data-aos="fade-right">
           <label for="titulo">Título: </label>
           <div><input type="text" id="titulo" name="titulo" placeholder="Ingrese el título" /></div>
           <label for="descripcion">Descripción: </label>
-          <div><textarea name="descripcion" id="descripcion" rows="2" placeholder="Ingresa la descripción de la actividad"></textarea></div>
+          <div><textarea name="descripcion" id="descripcion" rows="2"
+              placeholder="Ingresa la descripción de la actividad"></textarea></div>
           <label for="imgUrl">URL de la imagen: </label>
           <div><input type="text" id="imgUrl" name="imgUrl" placeholder="Ingrese la URL" /></div>
           <div><input type="submit" value="Enviar" id="enviar" name="enviar" class="btn"></div>
         </form>
-  
-        
-        <article id="contenedor_actividad" class="contenedor_actividades"> </article>
-      </div>
-   
-    </section>
-  </main> 
 
-  
+
+        <article id="contenedor_actividad" class="contenedor_actividades" data-aos="fade-left"> </article>
+      </div>
+
+    </section>
+  </main>
+
+
   <footer>
     <p>Página creada por <strong>LSDT</strong>. Información y derechos reservados. &copy; 2024</p>
   </footer>
   <script src="scripts/index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
